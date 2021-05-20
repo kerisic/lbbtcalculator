@@ -52,4 +52,13 @@ describe("LBBT Calculator", function () {
       expect(lbbtCalc(1000000)).toEqual(78350);
     });
   });
+
+  describe('it should raise an error if the price is invalid', function() {
+    
+    it('throws "Price cannot be less than zero" for -10"', function() {
+      expect(lbbtCalc(-10)).toEqual("Price cannot be less than zero!");
+    });
+      
+  });
+    
 });
